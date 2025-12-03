@@ -9,13 +9,13 @@ def processInput(input):
     for line in input:
         result = ""
         # SOLUTION W/OUT max_i
-        current = 0
+        cur_max = 0
         for remaining in range(11, -1, -1):
-            for i in range(current, len(line) - remaining):
-                if line[current] < line[i]:
-                    current = i
-            result += line[current]
-            current += 1
+            for i in range(cur_max, len(line) - remaining):
+                if line[cur_max] < line[i]:
+                    cur_max = i
+            result += line[cur_max]
+            cur_max += 1
         sum += int(result)
     
 
